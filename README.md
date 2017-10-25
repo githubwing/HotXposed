@@ -51,7 +51,7 @@ HotFix代码如图：把Toast逻辑写在了里面。
 ## 自动化热更新
 不过这样未免还是有些麻烦。所以当然要用gradle帮我们了。
 
-这里要感谢下 [@小小张]() [@神来一巴掌]() [@pighead]()
+这里要感谢下 [@小小张](https://github.com/anenn) [@神来一巴掌](https://github.com/JeasonWong) [@pighead](https://github.com/pighead4u)
 
 观察application插件，有个叫做transformClassesWithDex的任务，他就是把class文件转化为dex的任务，这个时候，我们去hook这个任务，在他执行完毕以后，自动把dex push到/sdcard/中。
 
@@ -64,7 +64,7 @@ HotFix代码如图：把Toast逻辑写在了里面。
 
 此时，只要修改完HotFix.java的代码，然后执行Task pushDex，代码就自动热更新完毕！
 
-**判断adb路径代码 使用了[AppMethodOrder](https://github.com/zjw-swun/AppMethodOrder)的代码，感谢原作者 [@三斤-虹猫]()**
+**判断adb路径代码 使用了[AppMethodOrder](https://github.com/zjw-swun/AppMethodOrder)的代码，感谢原作者 [@三斤-虹猫](https://github.com/quhung)**
 
 
 demo中，hook的app目标为:xposed_target.apk
