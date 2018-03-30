@@ -5,6 +5,8 @@
 ## Useage
 
 
+### Step 1
+
 compile the library in your build.gralde
 
 ```
@@ -19,7 +21,16 @@ allprojects {
 
 dependencies {
 	        compile 'com.github.githubwing:HotXposed:v1.0.0'
-	}
+}
 
 ```
 
+### Step 2
+
+Implement IHookerDispatcher interface And call HotXposed.hook(YourClass.class,lpparam);
+
+
+
+# Tips
+
+Only need kill the target app in MainActivity, not reboot the device anymore ,Enjoy! XD
