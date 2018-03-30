@@ -38,7 +38,6 @@ public class HotXposed {
           "showModulesUpdatedNotification", new XC_MethodHook() {
             @Override protected void beforeHookedMethod(MethodHookParam param) throws Throwable {
               param.setResult(new Object());
-              Log.e("hooked!","1221");
             }
 
             @Override protected void afterHookedMethod(MethodHookParam param) throws Throwable {
